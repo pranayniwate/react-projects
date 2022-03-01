@@ -5,6 +5,7 @@ import Games from './Games'
 import Nav from './Navbar'
 import List from './List'
 import User from './User'
+import Menu from './Menu'
 function App() {
   return(
     <Router>
@@ -14,6 +15,7 @@ function App() {
       <Route path='/Games' element={<Games/>}/>
       <Route path='/List' element={<List/>}/>
       <Route path='/User' element={<User/>}/>
+      <Route path='/Menu' element={<Menu />}/>
       </Routes>
     </Router>
   )

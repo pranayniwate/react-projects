@@ -18,6 +18,9 @@ return(<>
 
             <li><Link to="/User" onClick={() => setActive(3)}
             className={active === 3 ? 'link clicked' : 'link'}>User</Link></li>
+
+            <li><Link to="/Menu" onClick={() => setActive(3)}
+            className={active === 4 ? 'link clicked' : 'link'}>Menu</Link></li>
             
         </ul>
     </nav>
