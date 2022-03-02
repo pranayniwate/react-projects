@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import {menuData} from './Data'
 
 function Menu() {
+  document.body.style = `background:aliceblue ;`;
     const [list, setList] = useState(menuData);
     let uniqueCategory = menuData.map((item) =>{ return item.category})
     uniqueCategory = [...new Set(uniqueCategory)]

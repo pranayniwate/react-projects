@@ -9,7 +9,7 @@ return(<>
         <ul>
             <li><Link to="/" onClick={() => setActive(0)} 
             className={active === 0 ? 'link clicked':'link'} >Color Generator</Link></li>
-
+                 
             <li><Link to="/Games" onClick={() => setActive(1)}
             className={active === 1 ? 'link clicked' : 'link'}>Games</Link></li>
 
@@ -19,7 +19,7 @@ return(<>
             <li><Link to="/User" onClick={() => setActive(3)}
             className={active === 3 ? 'link clicked' : 'link'}>User</Link></li>
 
-            <li><Link to="/Menu" onClick={() => setActive(3)}
+            <li><Link to="/Menu" onClick={() => setActive(4)}
             className={active === 4 ? 'link clicked' : 'link'}>Menu</Link></li>
             
         </ul>
