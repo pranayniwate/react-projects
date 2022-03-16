@@ -2,10 +2,19 @@ import { useEffect, useState } from "react";
 import { BiEdit } from "react-icons/bi"
 import { IoMdRemoveCircle } from "react-icons/io"
 
+const getLocalStorage = () =>{
+    let list = localStorage.getItem('list');
+    if(list){
+        return JSON.parse(localStorage.getItem('list'))
+    }
+    else{
+        return [];
+    }
+}
 
 function List(){
     const [name, setName] = useState('');
-    const [list, setList] = useState([]);
+    const [list, setList] = useState(getLocalStorage);
     const [editing, setEditing] = useState(false);
     const [editID, setEditID] = useState(null)
     const [alert,setAlert] = useState({show:true,msg:'',type:''})
@@ -56,6 +65,10 @@ function List(){
         }, 1500);
         return () => clearTimeout(timeout)
     },[list,handleSubmit])
+
+    useEffect(()=>{
+        localStorage.setItem(`list`, JSON.stringify(list))
+    },[list])
 
     return(
         

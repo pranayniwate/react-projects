@@ -1,26 +1,21 @@
-import { useState } from 'react';
-import {Link} from 'react-router-dom'
+import { useEffect, useState } from 'react';
+import {NavLink} from 'react-router-dom'
+
 
 function Navbar() {
-    const [active, setActive] = useState(null);
-
+    
 return(<>
     <nav className='nav-bar' id='nav-bar'>
         <ul>
-            <li><Link to="/" onClick={() => setActive(0)} 
-            className={active === 0 ? 'link clicked':'link'} >Color Generator</Link></li>
+            <li><NavLink to="/" className="link" >Color Generator</NavLink></li>
                  
-            <li><Link to="/Games" onClick={() => setActive(1)}
-            className={active === 1 ? 'link clicked' : 'link'}>Games</Link></li>
+            <li><NavLink to="/Games" className="link">Games</NavLink></li>
 
-            <li><Link to="/List" onClick={() => setActive(2)}
-            className={active === 2 ? 'link clicked' : 'link'}>to-do List</Link></li>
+            <li><NavLink to="/List" className="link">to-do List</NavLink></li>
 
-            <li><Link to="/User" onClick={() => setActive(3)}
-            className={active === 3 ? 'link clicked' : 'link'}>User</Link></li>
+            <li><NavLink to="/User" className="link">User</NavLink></li>
 
-            <li><Link to="/Menu" onClick={() => setActive(4)}
-            className={active === 4 ? 'link clicked' : 'link'}>Menu</Link></li>
+            <li><NavLink to="/Menu" className="link">Menu</NavLink></li>
             
         </ul>
     </nav>

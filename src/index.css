@@ -36,7 +36,7 @@ code {
   color: aliceblue;
   font-size: 20px;
 }
-.clicked {
+.active {
   padding-bottom: 5px;
   border-bottom: 2px solid #00ffff;
   border-radius: 3px;
